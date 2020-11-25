@@ -10,30 +10,30 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/bar.js":
-/*!********************!*\
-  !*** ./src/bar.js ***!
-  \********************/
+/***/ "./bar.js":
+/*!****************!*\
+  !*** ./bar.js ***!
+  \****************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* binding */ bar\n/* harmony export */ });\nfunction bar() {\r\n    //\r\n  }\n\n//# sourceURL=webpack://fsd_lay/./src/bar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => /* binding */ bar\n/* harmony export */ });\nfunction bar() {\r\n    console.log('HELLO!!!')\r\n  }\n\n//# sourceURL=webpack:///./bar.js?");
 
 /***/ }),
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./index.js":
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bar */ \"./src/bar.js\");\n\r\n\r\n(0,_bar__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n//# sourceURL=webpack://fsd_lay/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bar__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bar */ \"./bar.js\");\nObject(function webpackMissingModule() { var e = new Error(\"Cannot find module './styles/styles.css'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }());\n\r\n\r\n\r\n(0,_bar__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 
@@ -94,7 +94,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bar
 /************************************************************************/
 /******/ 	// startup
 /******/ 	// Load entry module
-/******/ 	__webpack_require__("./src/index.js");
+/******/ 	__webpack_require__("./index.js");
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
