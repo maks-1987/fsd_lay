@@ -1,0 +1,6 @@
+*source
+*.scss
+*.config
+*.log
+node_modules/
+package-lock.json
