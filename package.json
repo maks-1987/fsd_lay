@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
-    "start": "cross-env NODE_ENV=development webpack serve --mode development"
+    "start": "cross-env NODE_ENV=development webpack serve --mode development --open"
   },
   "keywords": [
     "webpack",
@@ -40,6 +40,5 @@
   "dependencies": {
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
-  },
-  "main": "webpack.config.js"
+  }
 }

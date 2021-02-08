@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { allowedNodeEnvironmentFlags } = require('process')
 // const MiniCssExtrPlugin = require('mini-css-extract-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -14,7 +15,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'script.js',
     },
-
+    resolve: {
+        extensions: ['.js', '.json'],
+        alias: {}
+    },
+    devServer: {
+        port: 4200
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
@@ -35,11 +42,14 @@ module.exports = {
                 use: ['file-loader']
             },
             {
-                test: /\.(ttf|woff|eot)$/,
+                test: /\.(ttf|woff|woff2|eot)$/,
                 use: ['file-loader']
             },
         ],
     },
-
-
+    // optimization: {
+    //     splitChunks: {
+    //         chunks: 'all'
+    //     }
+    // }
 }
