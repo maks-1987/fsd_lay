@@ -8,6 +8,8 @@ body {
 
 h1 {
     font-size: 33px;
+    background-color: aquamarine;
+    padding: 10px 0 10px 0;
 }
 
 .backgrnd {

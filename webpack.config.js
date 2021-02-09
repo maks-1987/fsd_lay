@@ -1,8 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { allowedNodeEnvironmentFlags } = require('process')
-// const MiniCssExtrPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
@@ -12,8 +13,9 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: './js/index.js',
     output: {
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'script.js',
+        
     },
     resolve: {
         extensions: ['.js', '.json'],
@@ -30,12 +32,30 @@ module.exports = {
             }
         }),
         new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css',
+        }),
+        // new CopyWebpackPlugin([
+        //     {
+        //         from: path.resolve(__dirname, 'src/favicon.ico'),
+        //         to: path.resolve(__dirname, 'dist')
+        //     }
+        // ]),
     ],
     module: {
         rules: [
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                test: /\.css$/,
+                // use: ['style-loader', 'css-loader']
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: ''
+                        },
+                    },
+                    'css-loader',
+                ],
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
