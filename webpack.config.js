@@ -33,7 +33,6 @@ module.exports = {
     output: {
         filename: filename('js'),
         path: path.resolve(__dirname, 'dist'),
-
     },
     resolve: {
         extensions: ['.js', '.json'],
@@ -43,9 +42,10 @@ module.exports = {
         port: 4200
     },
     optimization: optimization(),
+
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: './pug/pages/index.pug',
             minify: {
                 collapseWhitespace: isProd
             }
@@ -54,15 +54,20 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: filename('css'),
         }),
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, 'src/favicon.ico'),
-                to: path.resolve(__dirname, 'dist')
-            }
-        ]),
+        // new CopyWebpackPlugin([
+        //     {
+        //         from: path.resolve(__dirname, 'src/favicon.ico'),
+        //         to: path.resolve(__dirname, 'dist')
+        //     }
+        // ]),
     ],
+
     module: {
         rules: [
+            {
+                test: /\.pug$/,
+                use: 'pug-loader'
+            },
             {
                 test: /\.css$/,
                 use: [
@@ -93,7 +98,7 @@ module.exports = {
                 use: ['file-loader']
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
+                test: /\.(ttf|woff|woff2|eot|svg)$/,
                 use: ['file-loader']
             },
         ],
