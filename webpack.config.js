@@ -17,7 +17,7 @@ const optimization = () => {
             chunks: 'all'
         }
     }
-    if(isProd) {
+    if (isProd) {
         config.minimizer = [
             new OptimizeCssAssetsPlug(),
             new TerserWebpackPlug()
@@ -66,7 +66,10 @@ module.exports = {
         rules: [
             {
                 test: /\.pug$/,
-                use: 'pug-loader'
+                loader: 'pug-loader',
+                options: {
+                    pretty: isDev,
+                },
             },
             {
                 test: /\.css$/,
