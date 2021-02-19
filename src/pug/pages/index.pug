@@ -1,16 +1,25 @@
 extends ../layout/main
 
+block variables 
+    - var page_style = '../pages-style/dist/style.css'
+
+block header 
+    include ../includes/modules/header
+
 block content
     h1 Jade - node template engine
     |
     |
-    a(href="#") 
+    a(href="#") A-1
     |
     |
-    a(href="#") 
+    a(href="#") A-2
     |
     |
-    a(href="#") 
+    a(href="#") A-3
     |
     |
-    a(href="#") 
+    a(href="#") A-4
+        
+block footer
+    include ../includes/modules/footer
