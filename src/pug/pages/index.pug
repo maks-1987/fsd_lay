@@ -1,25 +1,20 @@
 extends ../layout/main
 
 block variables 
-    - var page_style = '../pages-style/dist/style.css'
+    - var title = "Index"
+    //- - var pageClass = "homepage"
 
-block header 
-    include ../includes/modules/header
 
 block content
-    h1 Jade - node template engine
-    |
-    |
-    a(href="#") A-1
-    |
-    |
-    a(href="#") A-2
-    |
-    |
-    a(href="#") A-3
-    |
-    |
-    a(href="#") A-4
-        
-block footer
-    include ../includes/modules/footer
+    section 
+        .container 
+            h1 Jade - node template engine
+            |
+            |
+            a(href="#") A-1
+            |
+            |
+            a(href="#") A-2
+            |
+            |
+            a(href="#") A-3

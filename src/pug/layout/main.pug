@@ -6,16 +6,11 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-        
-        link(rel="stylesheet", href=page_style)
+        title #{title}
     
     body(class=pageClass)
         .wrapper 
-            block header
-            //- include ../includes/modules/header
+            include ../includes/header/header
             .content-wrapper 
                 block content
-
-            block footer
-            //- include ../includes/modules/footer
+            include ../includes/footer/footer

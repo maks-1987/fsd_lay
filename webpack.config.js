@@ -23,7 +23,6 @@ const optimization = () => {
             new TerserWebpackPlug()
         ]
     }
-
     return config
 }
 
@@ -46,6 +45,13 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './pug/pages/index.pug',
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'register.[contenthash].html',
+            template: './pug/pages/register.pug',
             minify: {
                 collapseWhitespace: isProd
             }
