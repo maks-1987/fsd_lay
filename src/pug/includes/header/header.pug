@@ -1,22 +1,21 @@
 header   
     .container 
-        .header-row 
-            .header-column
-                .logo 
-            .header-column 
-                nav 
-                    ul
-                        li
-                            a(href="#") О нас
-                        li
-                            a(href="#") Услуги >
-                        li
-                            a(href="#") Вакансии
-                        li
-                            a(href="#") Новости
-                        li
-                            a(href="#") Соглашения >
-                        li
-                            a(href="#") Войти 
-                        li
-                            a(href="#") Зарегистрировться
+        .header__row 
+            a(href="#").logo
+            nav.navigation  
+                ul
+                    li.navigation__item.active
+                        a(href="#") О нас
+                    li.navigation__item
+                        a(href="#") Услуги >
+                    li.navigation__item
+                        a(href="#") Вакансии
+                    li.navigation__item
+                        a(href="#") Новости
+                    li.navigation__item
+                        a(href="#") Соглашения >
+                    .enter
+                        a(href='#') Войти
+                    .register 
+                        a(href='#') Зарегистрировться
+                    
