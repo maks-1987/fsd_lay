@@ -38,7 +38,7 @@ module.exports = {
         alias: {}
     },
     devServer: {
-        host: '192.168.0.100',
+        // host: '192.168.0.1',
         port: 8080,
     },
     optimization: optimization(),
