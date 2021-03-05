@@ -1,4 +1,5 @@
 block variables
+- var isAuth
 
 doctype html
 html(lang="ru")
@@ -10,7 +11,11 @@ html(lang="ru")
     
     body(class=pageClass)
         .wrapper 
-            include ../includes/header/header
+            if isAuth
+                include ../includes/header/header
+            else 
+                include ../includes/header/header_auth
+
             .content 
                 block content
             include ../includes/footer/footer

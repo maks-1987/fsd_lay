@@ -6,4 +6,5 @@ node_modules/
 package-lock.json
 *dist/
 .vscode/
-*Pug_testing/
+*pug_exampl/
+*.fig
