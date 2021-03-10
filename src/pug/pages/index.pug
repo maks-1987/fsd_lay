@@ -2,19 +2,14 @@ extends ../layout/main
 
 block variables 
     - var title = "Toxin"
-    - var isAuth = false
+    - var isAuth = true
 
 
 block content
-    section 
-        .container 
-            h1 Jade - node template engine
-            |
-            |
-            a(href="#") A-1
-            |
-            |
-            a(href="#") A-2
-            |
-            |
-            a(href="#") A-3
+    .search-numbers 
+        .search-numbers_container 
+            .search-numders__form 
+                h1.search-numbers__form.title Найдём номера под ваши пожелания
+                .search-numbers__form.content Контент
+
+        p.description Лучшие номера для вашей работы, отдыха и просто вдохновения
