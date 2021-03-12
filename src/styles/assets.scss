@@ -1,0 +1,29 @@
+// ======= Сетка и контрольные точки ==========
+$mq1: 992px; // large
+$mq2: 768px; // medium
+$mq3: 576px; // small
+$mq4: 320px; // x-small
+
+$minwid: 320px;
+$maxwid: 1180px; // or your width from DESIG-template
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+$breakpoints: (
+    xs: 0px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+.container {
+    max-width: $maxwid;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: $breakpoints;
+}
+
+// =======/ Сетка и контрольные точки ==========

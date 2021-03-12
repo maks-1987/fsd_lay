@@ -1,0 +1,53 @@
+$dark: #1f2041;
+$dark-75: rgba(31, 32, 65, 0.75);
+$dark-50: rgba(31, 32, 65, 0.5);
+$dark-25: rgba(31, 32, 65, 0.25);
+$dark-5: rgba(31, 32, 65, 0.05);
+$purple: #bc9cff;
+$green: #6fcf97;
+$pr-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+$maxwid: 1180px;
+
+$mq1: 992px; // large
+$mq2: 768px; // medium
+$mq3: 576px; // small
+$mq4: 320px; // x-small
+
+@mixin h1 {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@mixin h2 {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+@mixin h3 {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+  
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-transform: uppercase;
+}
+
+@mixin text-body {
+    font-family: 'Montserrat-Regular';
+    font-style: normal;
+    font-size: 14px;
+}
+
+@mixin flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}

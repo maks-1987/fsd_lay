@@ -1,5 +1,4 @@
 *source
-*.scss
 *.config
 *.log
 node_modules/

@@ -1,0 +1,48 @@
+@import '~normalize.css';
+@import 'reset';
+@import 'fonts';
+@import 'mixins';
+@import 'header';
+@import 'footer';
+
+.wrapper{min-height: 100%; overflow: hidden;}
+
+.container {
+    max-width: $maxwid;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+body {
+    @include text-body;
+}
+
+.search-numbers {
+    background: url('../img/content_img/image3.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    height: 85vh;
+    position: relative;
+
+    &__container{
+        padding: 10px;
+    }
+
+    &__form{
+
+        title{}
+        content{}
+    }
+
+    .description{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: $dark-75;
+        width: 297px;
+        text-align: right;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 21px;
+        margin-right: 9.35%;
+    }
+}

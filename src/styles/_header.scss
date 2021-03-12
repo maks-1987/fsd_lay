@@ -1,0 +1,252 @@
+header {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 15px 0px;
+}
+
+.header__row {
+    @include flexbox;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        height: 40px;
+        width: 105.7px;
+        background: url("../img/Logo.png") 50% no-repeat;
+        background-size: cover;
+        position: relative;
+        
+
+        @media (max-width: $mq3) {
+            z-index: 1;
+        }
+    }
+}
+// ============================ burger-menu ========================
+.burger-menu {
+    display: none;
+
+    @media (max-width: $mq1) {
+        display: contents;
+        // visibility: initial;
+    }
+    &__button {
+        position: fixed;
+        border-radius: 15px;
+        background-color: #e9e9e9;
+        right: 15px;
+        top: 15px;
+        width: 40px;
+        height: 40px;
+        z-index: 5;
+    }
+
+    &__lines,
+    &__lines:before,
+    &__lines:after {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: rgb(111, 107, 206);
+        transition: 0.3s;
+    }
+
+    &__lines {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &::before {
+            content: "";
+            top: -8px;
+        }
+        &::after {
+            content: "";
+            top: 8px;
+        }
+    }
+
+    &__list {
+        position: fixed;
+        background-color: rgb(115, 109, 231);
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        top: -100%;
+        transition: 0.3s;
+        z-index: 3;
+    }
+}
+
+.burger-active {
+    .burger-menu__lines {
+        background-color: transparent;
+
+        &:before {
+            top: 0;
+            transform: rotate(220deg);
+        }
+        &:after {
+            top: 0;
+            transform: rotate(-220deg);
+        }
+    }
+
+    .enter, .register, a {
+        margin-top: 15px;
+        color: #ffffff;
+    }
+    path {
+        fill: #ffffff;
+    }
+
+    .burger-menu__list {
+        top: 0;
+        left: 0;
+        li {
+            padding: 15px 0px 0px 0px;
+
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.navigation {
+    @include flexbox;
+
+    ul {
+        @include flexbox;
+        align-items: center;
+        list-style: none;
+        letter-spacing: 0.09px;
+
+        @media (max-width: $mq1) {
+            display: none;
+        }
+    }
+
+    span {
+        padding-right: 3.55px;
+    }
+
+    &__item {
+        padding-right: 21.6px;
+
+        a {
+            color: $dark-50;
+        }
+
+        &.active {
+            a {
+                font-weight: 700;
+                color: #000000;
+            }
+        }
+    }
+
+    .services {
+        position: relative;
+
+        .services__container {
+            display: none;
+            position: absolute;
+        }
+
+        &__wrapper:hover {
+            .services__container {
+                display: block;
+                padding-top: 12px;
+                z-index: 9;
+                background-color: #8ba4f9;
+
+                li {
+                    padding: 0px 10px 10px 10px;
+                }
+            }
+        }
+    }
+
+    .agre {
+        position: relative;
+
+        &__container {
+            display: none;
+            position: absolute;
+        }
+
+        &__wrapper:hover {
+            .agre__container {
+                display: block;
+                padding-top: 12px;
+                z-index: 9;
+                background-color: #8ba4f9;
+
+                li {
+                    padding: 0px 10px 10px 10px;
+                }
+            }
+        }
+    }
+
+    .enter {
+        padding: 4px 0;
+        font-weight: 700;
+        font-size: 12px;
+        border: 6px #00a solid;
+        border-image: url("../img/border-button.png") 6;
+        text-transform: uppercase;
+        line-height: 14.63px;
+
+        @media (max-width: $mq1) {
+            display: none;
+        }
+
+        a {
+            color: $purple;
+            padding: 10px 15px;
+        }
+    }
+
+    .register {
+        margin-left: 20px;
+        border-radius: 20px;
+        padding: 10px 21px;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 14.63px;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+
+        @media (max-width: $mq1) {
+            display: none;
+        }
+
+        a {
+            color: #ffffff;
+        }
+    }
+
+    .user_profile {
+        position: relative;
+
+        a {
+            color: $dark-50;
+            padding-left: 24px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 30px;
+            left: 3px;
+            top: -7px;
+            bottom: 0;
+            background-color: $dark-5;
+        }
+    }
+}
